@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BB interjeri</title>
+  <meta name="description" content="Beātes personīgā mājaslapa: interjera dizains, vizualizācijas un projekti.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#faf7f2',
+            ink: '#2b2622',
+            clay: '#b5654a',
+            clayDark: '#9a5239',
+            sage: '#7d8f7a',
+            sand: '#efe7dc'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .fade-in { animation: fadeUp .8s ease both; }
+    .fade-in-delay { animation: fadeUp .8s .2s ease both; }
+        section[id] { scroll-margin-top: 5rem; }
+  </style>
+</head>
+
+<body class="bg-cream text-ink font-sans antialiased">
+
+  <!-- NAVIGĀCIJA -->
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 text-white transition-all duration-300">
+    <nav class="relative max-w-5xl mx-auto flex items-center justify-between md:justify-center px-5 py-4">
+      <a href="#top" class="md:absolute md:left-5 font-serif text-xl font-bold tracking-widest uppercase">BB</a>
+      <ul class="hidden md:flex gap-10 text-sm tracking-wide">
+        <li><a href="#top" class="pb-2 border-b-2 border-clay">Sākums</a></li>
+        <li><a href="#par-mani" class="pb-2 border-b-2 border-transparent hover:border-clay transition">Par mani</a></li>
+        <li><a href="#pakalpojumi" class="pb-2 border-b-2 border-transparent hover:border-clay transition">Pakalpojumi</a></li>
+        <li><a href="#portfolio" class="pb-2 border-b-2 border-transparent hover:border-clay transition">Portfolio</a></li>
+        <li><a href="#kontakti" class="pb-2 border-b-2 border-transparent hover:border-clay transition">Kontakti</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden p-2 text-2xl leading-none" aria-label="Izvēlne" aria-expanded="false">☰</button>
+    </nav>
+    <ul id="mobile-menu" class="hidden md:hidden px-5 pb-4 pt-2 space-y-3 text-sm bg-ink/90">
+      <li><a href="#top" class="block">Sākums</a></li>
+      <li><a href="#par-mani" class="block">Par mani</a></li>
+      <li><a href="#pakalpojumi" class="block">Pakalpojumi</a></li>
+      <li><a href="#portfolio" class="block">Portfolio</a></li>
+      <li><a href="#kontakti" class="block">Kontakti</a></li>
+    </ul>
+  </header>
+
+  <main id="top">
+
+    <!-- SĀKUMS -->
+    <section class="relative min-h-screen flex items-center justify-center text-center text-white px-5 overflow-hidden bg-gradient-to-br from-ink to-clayDark">
+      <div class="absolute inset-0">
+        <img src="images/hero1.jpg" alt="Dabīgu materiālu paraugi: koks, lins un keramika" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity" onerror="this.remove()">
+      </div>
+
+      <div class="relative z-10 max-w-3xl mx-auto pt-24 pb-12">
+        <ul class="flex justify-center gap-6 mb-10 fade-in">
+          <li><a href="https://www.instagram.com/0b3at3" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-clay transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/be%C4%81te-b%C4%81li%C5%86a-422885302" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-clay transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 10v7M8 7v.01M12 17v-7M12 13c0-2 1.5-3 3-3s3 1 3 3v4"/></svg></a></li>
+          <li><a href="mailto:beatebalina05@gmail.com" aria-label="E-pasts" class="hover:text-clay transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></a></li>
+          <li><a href="tel:+37127172201" aria-label="Tālrunis" class="hover:text-clay transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></a></li>
+        </ul>
+
+        <h1 class="font-serif font-bold uppercase leading-[0.95] tracking-tight text-5xl sm:text-7xl lg:text-8xl fade-in">
+          BB<br>interjeri
+        </h1>
+        <p class="mt-10 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto fade-in-delay">Skaists, praktisks mājoklis bez laika zaudēšanas un dārgām kļūdām</p>
+        <p class="mt-3 text-white/70 max-w-xl mx-auto fade-in-delay">Palīdzu iekārtot, izplānot un saorganizēt dzīvokļus un mājas, lai patiesi justos kā mājās. No koncepcijas un vizualizācijas līdz budžetam un iepirkumu sarakstam.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center fade-in-delay">
+          <a href="#kontakti" class="bg-clay hover:bg-clayDark text-white px-6 py-3 rounded-lg transition-all">Pasūtīt dizaina projektu</a>
+          <a href="#portfolio" class="border border-white/60 hover:border-clay hover:text-clay px-6 py-3 rounded-lg transition-all">Skatīt portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAR MANI -->
+    <section id="par-mani" class="py-20 px-5 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center">Par mani</h2>
+        <div class="mt-10 max-w-2xl mx-auto">
+
+          <div>
+            <p class="text-ink/80 leading-relaxed text-justify">
+              Esmu RSU studente, kas apgūst starptautisko biznesu un ilgtspējīgu ekonomiku. Pirms tam trīs gadus mācījos interjera dizainu RDMV
+              un pēdējos divus gadus esmu veidojusi interjera un ārtelpas plānojumus un vizualizācijas sev un klientiem.
+            </p>
+            <p class="mt-4 text-ink/80 leading-relaxed text-justify">
+              Mans mērķis ir savienot dizainu ar biznesa domāšanu un pēc studijām atvērt savu interjera dizaina studiju.
+            </p>
+
+            <h3 class="mt-8 font-serif text-xl font-bold">Prasmes</h3>
+            <ul class="mt-3 flex flex-wrap gap-2 text-sm font-medium">
+              <li class="bg-sand px-4 py-2 rounded-full">AutoCAD</li>
+              <li class="bg-sand px-4 py-2 rounded-full">SketchUp</li>
+              <li class="bg-sand px-4 py-2 rounded-full">3D vizualizācija</li>
+              <li class="bg-sand px-4 py-2 rounded-full">Adobe Illustrator</li>
+              <li class="bg-sand px-4 py-2 rounded-full">Adobe Photoshop</li>
+              <li class="bg-sand px-4 py-2 rounded-full">Projektu plānošana un organizēšana</li>
+            </ul>
+
+            <a href="#kontakti" class="inline-block mt-8 bg-clay hover:bg-clayDark text-white px-6 py-3 rounded-lg transition-all">Pasūtīt dizaina projektu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAKALPOJUMI -->
+    <section id="pakalpojumi" class="py-20 px-5">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center">Ko es piedāvāju</h2>
+        <div class="mt-10 grid sm:grid-cols-2 gap-6">
+          <article class="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <span class="w-12 h-12 rounded-full bg-sand text-clay flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+              </span>
+              <span class="text-clay/60 font-bold">01</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold mt-4">Telpas koncepcija un moodboard</h3>
+            <p class="mt-2 text-sm text-ink/70">Vienota stila ideja, kas atspoguļo tavu personību, nevis tipveida risinājums.</p>
+          </article>
+          <article class="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <span class="w-12 h-12 rounded-full bg-sand text-clay flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+              </span>
+              <span class="text-clay/60 font-bold">02</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold mt-4">3D vizualizācija un plānojums</h3>
+            <p class="mt-2 text-sm text-ink/70">Redzi gala rezultātu pirms pirkšanas, lai izvairītos no dārgām kļūdām.</p>
+          </article>
+          <article class="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <span class="w-12 h-12 rounded-full bg-sand text-clay flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path stroke-linecap="round" d="M3 10h18M16 15h2"/></svg>
+              </span>
+              <span class="text-clay/60 font-bold">03</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold mt-4">Budžeta plāns un iepirkumu saraksts</h3>
+            <p class="mt-2 text-sm text-ink/70">Skaidrs budžets pa prioritātēm un gatavs preču saraksts, lai nav jāpēta pašam.</p>
+          </article>
+          <article class="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-300">
+            <div class="flex items-center justify-between">
+              <span class="w-12 h-12 rounded-full bg-sand text-clay flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+              </span>
+              <span class="text-clay/60 font-bold">04</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold mt-4">Ilgtspējīgu materiālu izvēle</h3>
+            <p class="mt-2 text-sm text-ink/70">Izturīgi, ilgmūžīgi materiāli un piegādātāji, kas kalpos gadiem.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="py-20 px-5 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center">Portfolio</h2>
+        <p class="mt-4 text-center text-ink/70 max-w-xl mx-auto">Izvēlēti darbi, kuros esmu veidojusi plānojumus, rasējumus un vizualizācijas.</p>
+
+        <h3 class="mt-12 font-serif text-2xl font-bold text-center uppercase tracking-wide">Mājas interjers</h3>
+
+        <!-- Katra sadaļa: augšā slīdrāde no tās bildēm, uzspiežot atveras visas bildes. Jaunu bildi pievieno kā <button class="gallery-item"> bloku sadaļas cat-grid iekšā. -->
+        <div class="mt-8 space-y-8">
+
+          <!-- VIZUALIZĀCIJAS: bildes images/viz1.jpg … viz8.jpg -->
+          <div class="category" data-cat="vizualizacijas">
+            <button class="cat-toggle group relative block w-full aspect-[4/3] sm:aspect-[16/9] rounded-2xl overflow-hidden bg-sand text-left" aria-expanded="false">
+              <div class="cat-slides absolute inset-0"></div>
+              <div class="cat-shade absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent"></div>
+              <div class="absolute bottom-0 inset-x-0 p-5 sm:p-8 flex items-end justify-between gap-4">
+                <div>
+                  <h4 class="cat-title font-serif text-2xl sm:text-4xl font-bold text-white">Vizualizācijas</h4>
+                  <p class="cat-desc mt-1 text-sm sm:text-base text-white/80">3D vizualizācijas, kas parāda telpu gala izskatu</p>
+                </div>
+                <span class="cat-more shrink-0 text-sm text-white border border-white/60 group-hover:border-clay group-hover:bg-clay rounded-full px-4 py-2 transition">Skatīt visas</span>
+              </div>
+            </button>
+            <div class="cat-grid hidden mt-4 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-sand">
+              <img src="images/viz1.jpg" alt="Kabineta interjera vizualizācija dienas gaismā" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-sand">
+              <img src="images/viz2.jpg" alt="Kabineta interjera vizualizācija ar vakara apgaismojumu" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-sand">
+              <img src="images/viz3.jpg" alt="Kabineta atpūtas stūris ar zaļu atzveltnes krēslu" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-sand">
+              <img src="images/viz4.jpg" alt="Virtuve ar marmora salu un dzīvojamā zona" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-sand">
+              <img src="images/viz5.jpg" alt="Ēdamzona ar kristāla lustru" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-sand">
+              <img src="images/viz6.jpg" alt="Vannas istaba ar tumšu marmoru un divām izlietnēm" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-sand">
+              <img src="images/viz7.jpg" alt="Balta virtuve ar iebūvētu tehniku un zelta rokturiem" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-sand">
+              <img src="images/viz8.jpg" alt="Gaitenis ar melnām durvīm un gaismas līnijām griestos" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            </div>
+          </div>
+
+          <!-- RASĒJUMI: bildes images/ras1.jpg … ras7.jpg -->
+          <div class="category" data-cat="rasejumi" data-fit="contain">
+            <button class="cat-toggle group relative block w-full aspect-[4/3] sm:aspect-[16/9] rounded-2xl overflow-hidden bg-sand text-left" aria-expanded="false">
+              <div class="cat-slides absolute inset-0"></div>
+              <div class="cat-shade absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent"></div>
+              <div class="absolute bottom-0 inset-x-0 p-5 sm:p-8 flex items-end justify-between gap-4">
+                <div>
+                  <h4 class="cat-title font-serif text-2xl sm:text-4xl font-bold text-white">Rasējumi</h4>
+                  <p class="cat-desc mt-1 text-sm sm:text-base text-white/80">Plānojumi un tehniskie rasējumi</p>
+                </div>
+                <span class="cat-more shrink-0 text-sm text-white border border-white/60 group-hover:border-clay group-hover:bg-clay rounded-full px-4 py-2 transition">Skatīt visas</span>
+              </div>
+            </button>
+            <div class="cat-grid hidden mt-4 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-ink/10">
+              <img src="images/ras1.jpg" alt="Esošās situācijas plāns" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-ink/10">
+              <img src="images/ras2.jpg" alt="Pārbūves plāns" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-ink/10">
+              <img src="images/ras3.jpg" alt="Grīdas plāns" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-ink/10">
+              <img src="images/ras4.jpg" alt="Griestu plāns" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-ink/10">
+              <img src="images/ras5.jpg" alt="Durvju un ailu plāns" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-ink/10">
+              <img src="images/ras6.jpg" alt="Apgaismojuma plāns" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            <button class="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-ink/10">
+              <img src="images/ras7.jpg" alt="Sienu notinums" loading="lazy" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" onerror="this.closest('button').remove()">
+            </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilnais portfolio PDF -->
+        <div class="mt-12 text-center">
+          <p class="text-ink/70">Pilnajā portfolio ir vairāk darbu: studiju projekti RDMV (2021–2023) un personīgie projekti.</p>
+          <a href="portfolio-beate-balina.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 bg-clay hover:bg-clayDark text-white px-6 py-3 rounded-lg transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>
+            Skatīt pilno portfolio (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BILDES PALIELINĀJUMS -->
+    <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-ink/95 p-4" role="dialog" aria-modal="true" aria-label="Bildes palielinājums">
+      <button id="lb-close" class="absolute top-4 right-5 text-white text-4xl leading-none hover:text-clay transition" aria-label="Aizvērt">&times;</button>
+      <button id="lb-prev" class="absolute left-2 sm:left-5 text-white text-5xl leading-none p-2 hover:text-clay transition" aria-label="Iepriekšējā bilde">&lsaquo;</button>
+      <img id="lb-img" src="" alt="" class="max-h-[85vh] max-w-full rounded-lg shadow-2xl">
+      <button id="lb-next" class="absolute right-2 sm:right-5 text-white text-5xl leading-none p-2 hover:text-clay transition" aria-label="Nākamā bilde">&rsaquo;</button>
+    </div>
+
+    <!-- KONTAKTI -->
+    <section id="kontakti" class="py-20 px-5">
+      <div class="max-w-xl mx-auto">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center">Kontakti</h2>
+        <p class="mt-4 text-center text-ink/70">Ir ideja vai projekts? Uzraksti man.</p>
+
+        <!-- KONTAKTI: aizvieto ar saviem datiem, nevajadzīgos <li> blokus izdzēs -->
+        <ul class="mt-8 grid sm:grid-cols-2 gap-4 text-center text-sm">
+          <li class="bg-white rounded-xl p-4">
+            <p class="font-medium">E-pasts</p>
+            <a href="mailto:beatebalina05@gmail.com" class="text-clay hover:text-clayDark transition">beatebalina05@gmail.com</a>
+          </li>
+          <li class="bg-white rounded-xl p-4">
+            <p class="font-medium">Tālrunis</p>
+            <a href="tel:+37127172201" class="text-clay hover:text-clayDark transition">+371 27172201</a>
+          </li>
+          <li class="bg-white rounded-xl p-4">
+            <p class="font-medium">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/be%C4%81te-b%C4%81li%C5%86a-422885302" target="_blank" rel="noopener" class="text-clay hover:text-clayDark transition">Mans LinkedIn profils</a>
+          </li>
+          <li class="bg-white rounded-xl p-4">
+            <p class="font-medium">Instagram</p>
+            <a href="https://www.instagram.com/0b3at3" target="_blank" rel="noopener" class="text-clay hover:text-clayDark transition">@0b3at3</a>
+          </li>
+        </ul>
+
+        <form id="contact-form" class="mt-8 space-y-4">
+          <!-- Web3Forms access key -->
+          <input type="hidden" name="access_key" value="e3ecc953-ba30-4450-bfd1-7b8ebd4bb55b">
+          <input type="hidden" name="subject" value="Jauna ziņa no mājaslapas">
+          <input type="hidden" name="from_name" value="Personīgā mājaslapa">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1">Vārds</label>
+            <input id="name" name="name" type="text" required
+              class="w-full rounded-lg border border-ink/20 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-clay">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1">E-pasts</label>
+            <input id="email" name="email" type="email" required
+              class="w-full rounded-lg border border-ink/20 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-clay">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-1">Ziņa</label>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full rounded-lg border border-ink/20 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-clay"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-clay hover:bg-clayDark text-white px-6 py-3 rounded-lg transition-all font-medium">
+            Nosūtīt
+          </button>
+          <p id="form-status" class="text-center text-sm" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- KĀJENE -->
+  <footer class="py-8 px-5 text-center text-sm text-ink/60 border-t border-ink/10">
+    <div class="flex justify-center gap-6 mb-3 font-medium">
+      <a href="https://www.linkedin.com/in/be%C4%81te-b%C4%81li%C5%86a-422885302" target="_blank" rel="noopener" class="hover:text-clay transition">LinkedIn</a>
+      <a href="https://www.instagram.com/0b3at3" target="_blank" rel="noopener" class="hover:text-clay transition">Instagram</a>
+      <a href="mailto:beatebalina05@gmail.com" class="hover:text-clay transition">E-pasts</a>
+    </div>
+    © <span id="year"></span> Beāte. Visas tiesības aizsargātas.
+  </footer>
+
+  <script>
+    // Mobilā izvēlne
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const isHidden = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!isHidden));
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Portfolio sadaļas: slīdrāde + atvēršana
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('.category').forEach((cat, ci) => {
+      const toggle = cat.querySelector('.cat-toggle');
+      const grid = cat.querySelector('.cat-grid');
+      const slides = cat.querySelector('.cat-slides');
+      const imgs = [...grid.querySelectorAll('img')];
+
+      if (!imgs.length) {
+        // Sadaļā vēl nav bilžu: rāda tikai nosaukumu, nav ko atvērt
+        toggle.disabled = true;
+        toggle.classList.remove('group');
+        cat.querySelector('.cat-more').remove();
+        cat.querySelector('.cat-shade').remove();
+        cat.querySelector('.cat-title').classList.replace('text-white', 'text-clay');
+        cat.querySelector('.cat-desc').classList.replace('text-white/80', 'text-ink/60');
+        return;
+      }
+
+      cat.querySelector('.cat-more').textContent = `Skatīt visas (${imgs.length})`;
+      const slideEls = imgs.map((img, i) => {
+        const el = document.createElement('img');
+        el.src = img.getAttribute('src');
+        el.alt = '';
+        const fit = cat.dataset.fit === 'contain' ? 'object-contain bg-white p-2 sm:p-4 pb-24 sm:pb-28' : 'object-cover';
+        el.className = `absolute inset-0 w-full h-full ${fit} transition-opacity duration-1000 ` + (i === 0 ? 'opacity-100' : 'opacity-0');
+        el.onerror = () => el.remove();
+        slides.appendChild(el);
+        return el;
+      });
+      let cur = 0;
+      if (!reduceMotion && slideEls.length > 1) {
+        setTimeout(() => setInterval(() => {
+          const live = slideEls.filter(e => e.isConnected);
+          if (live.length < 2) return;
+          cur = (cur + 1) % live.length;
+          live.forEach((e, i) => {
+            e.classList.toggle('opacity-100', i === cur);
+            e.classList.toggle('opacity-0', i !== cur);
+          });
+        }, 3000), ci * 1000);
+      }
+
+      toggle.addEventListener('click', () => {
+        const open = grid.classList.toggle('hidden') === false;
+        toggle.setAttribute('aria-expanded', String(open));
+        cat.querySelector('.cat-more').textContent = open ? 'Aizvērt' : `Skatīt visas (${imgs.length})`;
+        if (open) grid.querySelectorAll('img').forEach(i => i.loading = 'eager');
+      });
+    });
+
+    // Bildes palielinājums (lightbox)
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    let lbItems = [], lbIndex = 0;
+    function lbShow(i) {
+      lbIndex = (i + lbItems.length) % lbItems.length;
+      const img = lbItems[lbIndex].querySelector('img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+    }
+    function lbOpen(item) {
+      lbItems = [...item.closest('.cat-grid').querySelectorAll('.gallery-item')];
+      lbShow(lbItems.indexOf(item));
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+    function lbClose() {
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.gallery-item').forEach(item => item.addEventListener('click', () => lbOpen(item)));
+    document.getElementById('lb-close').addEventListener('click', lbClose);
+    document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIndex - 1); });
+    document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIndex + 1); });
+    lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+    document.addEventListener('keydown', e => {
+      if (lb.classList.contains('hidden')) return;
+      if (e.key === 'Escape') lbClose();
+      if (e.key === 'ArrowLeft') lbShow(lbIndex - 1);
+      if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
+    });
+
+    // Kontaktu forma (Web3Forms)
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = 'Sūtu...';
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          statusEl.textContent = 'Paldies! Ziņa nosūtīta.';
+          form.reset();
+        } else {
+          statusEl.textContent = 'Neizdevās nosūtīt. Mēģini vēlreiz.';
+        }
+      } catch (err) {
+        statusEl.textContent = 'Radās kļūda. Mēģini vēlreiz.';
+      }
+    });
+
+    // Izvēlne iegūst tumšu fonu, ritinot lejup
+    const header = document.getElementById('site-header');
+    function updateHeader() {
+      header.classList.toggle('bg-ink/85', window.scrollY > 60);
+      header.classList.toggle('backdrop-blur-md', window.scrollY > 60);
+    }
+    window.addEventListener('scroll', updateHeader);
+    updateHeader();
+
+    // Gads kājenē
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
